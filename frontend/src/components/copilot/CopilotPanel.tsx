@@ -249,7 +249,7 @@ export const CopilotPanel: React.FC = () => {
           <div className={styles.copilotBadge}>
             <SparkleRegular fontSize={16} />
           </div>
-          <span className={styles.title}>Copilot</span>
+          <span className={styles.title}>Mail AI</span>
         </div>
         <div className={styles.headerActions}>
           <button
