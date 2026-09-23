@@ -113,8 +113,8 @@ export const TopAppBar: React.FC = () => {
           id="copilot-toggle-btn"
           className={`${styles.iconButton} ${assistantOpen ? styles.iconButtonActive : ''}`}
           onClick={toggleAssistant}
-          aria-label={assistantOpen ? 'Close Copilot panel' : 'Open Copilot panel'}
-          title="Copilot"
+          aria-label={assistantOpen ? 'Close Mail AI panel' : 'Open Mail AI panel'}
+          title="Mail AI"
         >
           {assistantOpen
             ? <PanelRightContractRegular fontSize={18} />

@@ -265,7 +265,7 @@ export const CopilotPanel: React.FC = () => {
             id="close-copilot-btn"
             className={styles.iconBtn}
             onClick={toggleAssistant}
-            title="Close Copilot"
+            title="Close Mail AI"
             aria-label="Close Copilot panel"
           >
             <DismissRegular fontSize={16} />
@@ -280,7 +280,7 @@ export const CopilotPanel: React.FC = () => {
             <div className={styles.welcomeIcon}>
               <BotRegular fontSize={28} />
             </div>
-            <h2 className={styles.welcomeTitle}>Outlook Copilot</h2>
+            <h2 className={styles.welcomeTitle}>Mail AI</h2>
             <p className={styles.welcomeText}>
               I can control the mail app for you. Ask me to find emails, change filters,
               open messages, or draft replies.
@@ -402,7 +402,7 @@ export const CopilotPanel: React.FC = () => {
             id="copilot-input"
             className={styles.input}
             rows={1}
-            placeholder={isStreaming ? 'Copilot is working...' : 'Ask Copilot to drive Outlook...'}
+            placeholder={isStreaming ? 'Mail AI is working...' : 'Ask Mail AI to drive Mail AI...'}
             value={inputText}
             onChange={e => setInputText(e.target.value)}
             onKeyDown={handleKeyDown}
