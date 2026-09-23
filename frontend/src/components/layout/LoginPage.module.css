@@ -1,0 +1,93 @@
+.page {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0078d4 0%, #004e8c 60%, #002050 100%);
+  padding: 24px;
+}
+
+.card {
+  background: var(--color-surface);
+  border-radius: 12px;
+  box-shadow: var(--shadow-lg);
+  padding: 40px 40px 32px;
+  max-width: 380px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.brandHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.brandIcon {
+  display: flex;
+  align-items: center;
+}
+
+.brandName {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0078d4;
+  letter-spacing: -0.5px;
+}
+
+.heading {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  line-height: 1.3;
+  margin: 0;
+}
+
+.subheading {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.googleBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 11px 20px;
+  background: #fff;
+  border: 1px solid #dadce0;
+  border-radius: 6px;
+  font-size: var(--font-size-base);
+  font-family: var(--font-family);
+  font-weight: 600;
+  color: #3c4043;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background var(--transition), box-shadow var(--transition);
+  box-shadow: var(--shadow-sm);
+  margin-top: 8px;
+}
+
+.googleBtn:hover {
+  background: #f8f9fa;
+  box-shadow: var(--shadow-md);
+}
+
+.googleBtn:active {
+  background: #f1f3f4;
+}
+
+.disclaimer {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-disabled);
+  line-height: 1.5;
+  margin-top: 4px;
+}

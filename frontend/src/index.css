@@ -1,0 +1,151 @@
+/* ============================================================
+   Mail App — Global Styles
+   Outlook-inspired design: Segoe UI, 4px radius, subtle borders
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* ── CSS Custom Properties ───────────────────────────────────── */
+:root {
+  --color-brand: #0078d4;
+  --color-brand-dark: #005a9e;
+  --color-brand-light: #deecf9;
+  --color-brand-active: #004578;
+
+  --color-surface: #ffffff;
+  --color-surface-alt: #f3f2f1;
+  --color-surface-hover: #edebe9;
+  --color-surface-selected: #deecf9;
+  --color-surface-selected-hover: #c7e0f4;
+
+  --color-border: #d2d0ce;
+  --color-border-light: #e1dfdd;
+
+  --color-text-primary: #201f1e;
+  --color-text-secondary: #605e5c;
+  --color-text-disabled: #a19f9d;
+  --color-text-on-brand: #ffffff;
+
+  --color-unread-accent: #0078d4;
+  --color-skeleton: #edebe9;
+
+  --font-family: 'Segoe UI', 'Inter', system-ui, -apple-system, sans-serif;
+  --font-size-xs: 11px;
+  --font-size-sm: 12px;
+  --font-size-base: 14px;
+  --font-size-lg: 16px;
+  --font-size-xl: 20px;
+  --font-size-2xl: 28px;
+
+  --radius-sm: 2px;
+  --radius-base: 4px;
+  --radius-lg: 8px;
+  --radius-pill: 100px;
+  --radius-circle: 50%;
+
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.1);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.14);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.18);
+
+  --nav-rail-width: 48px;
+  --folder-pane-width: 220px;
+  --list-pane-width: 340px;
+  --topbar-height: 48px;
+  --transition: 150ms ease;
+}
+
+/* ── Dark theme ──────────────────────────────────────────────── */
+[data-theme="dark"] {
+  --color-brand: #4fc3f7;
+  --color-brand-dark: #0288d1;
+  --color-brand-light: #1a3a5c;
+  --color-brand-active: #81d4fa;
+
+  --color-surface: #1b1b1b;
+  --color-surface-alt: #252525;
+  --color-surface-hover: #2d2d2d;
+  --color-surface-selected: #1a3a5c;
+  --color-surface-selected-hover: #234f77;
+
+  --color-border: #3d3d3d;
+  --color-border-light: #2d2d2d;
+
+  --color-text-primary: #f3f2f1;
+  --color-text-secondary: #a8a8a8;
+  --color-text-disabled: #5a5a5a;
+  --color-text-on-brand: #ffffff;
+
+  --color-unread-accent: #4fc3f7;
+  --color-skeleton: #2d2d2d;
+}
+
+/* ── Reset & Base ────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  overflow: hidden;
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  color: var(--color-text-primary);
+  background: var(--color-surface);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Scrollbar ───────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: var(--radius-pill);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-disabled);
+}
+
+/* ── Utility ─────────────────────────────────────────────────── */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ── Skeleton animation ─────────────────────────────────────── */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--color-skeleton) 25%,
+    var(--color-surface-hover) 50%,
+    var(--color-skeleton) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: var(--radius-base);
+}

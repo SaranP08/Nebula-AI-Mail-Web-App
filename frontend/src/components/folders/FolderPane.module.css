@@ -1,0 +1,110 @@
+.pane {
+  width: var(--folder-pane-width);
+  height: 100%;
+  max-height: 100%;
+  min-height: 0;
+  background: var(--color-surface-alt);
+  border-right: 1px solid var(--color-border-light);
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+.newMailWrapper {
+  padding: 12px 12px 8px;
+}
+
+.newMailButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 7px 16px;
+  background: var(--color-brand);
+  color: var(--color-text-on-brand);
+  border: none;
+  border-radius: var(--radius-base);
+  font-size: var(--font-size-base);
+  font-family: var(--font-family);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background var(--transition), box-shadow var(--transition);
+}
+
+.newMailButton:hover {
+  background: var(--color-brand-dark);
+  box-shadow: var(--shadow-sm);
+}
+
+.newMailButton:active {
+  background: var(--color-brand-active);
+}
+
+.folderList {
+  display: flex;
+  flex-direction: column;
+  padding: 4px 8px;
+  gap: 1px;
+}
+
+.folderItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 7px 8px;
+  border: none;
+  border-radius: var(--radius-base);
+  background: transparent;
+  color: var(--color-text-primary);
+  font-size: var(--font-size-base);
+  font-family: var(--font-family);
+  cursor: pointer;
+  transition: background var(--transition);
+  text-align: left;
+  position: relative;
+}
+
+.folderItem:hover {
+  background: var(--color-surface-hover);
+}
+
+.folderItemActive {
+  background: var(--color-surface-selected);
+  color: var(--color-brand);
+  font-weight: 600;
+}
+
+.folderItemActive:hover {
+  background: var(--color-surface-selected-hover);
+}
+
+.folderIcon {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.folderLabel {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.badge {
+  min-width: 20px;
+  height: 20px;
+  padding: 0 5px;
+  background: var(--color-brand);
+  color: #fff;
+  border-radius: var(--radius-pill);
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
