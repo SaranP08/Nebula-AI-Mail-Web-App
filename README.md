@@ -4,9 +4,6 @@ A Gmail web client with an Outlook Web-style UI (React + Fluent UI v9) and an AI
 controls the interface directly — searching, filtering, opening emails, and drafting replies by
 emitting UI actions rather than replying with text alone.
 
-**Live demo:** [your deployed URL]
-**Demo video:** [your video link]
-
 ---
 
 ## 1. Setup — Run It Locally
